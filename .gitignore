@@ -110,6 +110,7 @@ AWS-DR/
 ENV/
 env.bak/
 venv.bak/
+secrets/
 
 # Spyder project settings
 .spyderproject

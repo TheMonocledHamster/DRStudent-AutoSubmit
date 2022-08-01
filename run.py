@@ -1,6 +1,8 @@
 import subprocess
-import os
+import time
 
-# target_dir = os.path.dirname(os.path.abspath(__file__))
-target_file = ".\Source\main.py"
-subprocess.run("python "+target_file, shell=True)
+while True:
+    target_file = ".\Source\main.py"
+    subprocess.run("python "+target_file, shell=True)
+    time.sleep(1800)
+    print(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
