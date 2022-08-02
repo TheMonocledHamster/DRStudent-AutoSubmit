@@ -36,7 +36,10 @@ class DeepRacerStudent:
 
 
     def set_up(self):
-        self.driver = webdriver.Firefox(executable_path="./driver/geckodriver.exe")
+        try:
+            self.driver = webdriver.Firefox(executable_path="./driver/geckodriver.exe")
+        except:
+            self.driver = webdriver.Firefox(executable_path="./driver/geckodriver")
         self.actor = ActionChains(self.driver)
         self.wait = WebDriverWait(self.driver,30)
 
