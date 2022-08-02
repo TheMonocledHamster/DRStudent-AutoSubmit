@@ -28,11 +28,15 @@ class DeepRacerStudent:
         
 
     def submit(self):
-        self.set_up()
-        self.open()
-        self.login()
-        self.race()
-        self.tear_down()
+        try:
+            self.set_up()
+            self.open()
+            self.login()
+            self.race()
+        except:
+            raise Exception()
+        finally:
+            self.tear_down()
 
 
     def set_up(self):
