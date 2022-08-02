@@ -33,8 +33,8 @@ class DeepRacerStudent:
             self.open()
             self.login()
             self.race()
-        except:
-            raise Exception()
+        except Exception as e:
+            raise e
         finally:
             self.tear_down()
 
